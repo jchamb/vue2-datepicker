@@ -63,7 +63,7 @@ export default {
     placeholder: String,
     lang: {
       type: String,
-      default: 'zh'
+      default: 'en'
     },
     value: null,
     shortcuts: {
@@ -267,93 +267,4 @@ export default {
 </script>
 
 
-<style scoped>
-.datepicker {
-  position: relative;
-  display: inline-block;
-  color:#73879c;
-  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
-}
 
-.datepicker * {
-  box-sizing: border-box;
-}
-
-
-.datepicker-popup {
-  position: absolute;
-  width: 250px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  border: 1px solid #d9d9d9;
-  background-color: #fff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-  z-index: 1000;
-}
-
-.range {
-  width: 496px;
-}
-
-.input {
-  display: inline-block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 30px 6px 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #555;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-}
-
-.input-icon {
-  top: 0;
-  right: 0;
-  position: absolute;
-  width: 30px;
-  height: 100%;
-  color: #888;
-  text-align: center;
-  font-style: normal;
-}
-.input-icon::after{
-  content:'';
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  vertical-align: middle;
-}
-.input-icon__calendar{
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA00lEQVQ4T72SzQ2CQBCF54UGKIES6EAswQq0BS/A3PQ0hAt0oKVQgiVYAkcuZMwSMOyCyRKNe9uf+d6b2Qf6csGtL8sy7vu+Zebn/E5EoiAIwjRNH/PzBUBEGiJqmPniAMw+YeZkFSAiJwA3j45aVT0wsxGitwOjDGDnASBVvU4OLQARRURk9e4CAcSqWn8CLHp3Ae6MXAe/B4yzUeMkz/P9ZgdFUQzFIwD/B4yKgwMTos0OtvzCHcDRJ0gAzlmW1VYSq6oKu66LfQBTjC2AT+Hamxcml5IRpPq3VQAAAABJRU5ErkJggg==);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.input-icon__close::before {
-  content: '\2716';
-  vertical-align: middle;
-}
-
-.datepicker-top {
-  margin: 0 12px;
-  line-height: 34px;
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-}
-
-.datepicker-top>span {
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.datepicker-top>span:hover {
-  color: #1284e7;
-}
-
-.datepicker-top>span:after {
-  content: "|";
-  margin: 0 10px;
-  color: #48576a;
-}
-</style>
