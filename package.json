@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mengxiong10/vue2-datepicker#readme",
   "dependencies": {
+    "dateformat": "^2.0.0",
     "vue": "^2.2.1"
   },
   "devDependencies": {

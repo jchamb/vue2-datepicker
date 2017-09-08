@@ -44,6 +44,7 @@
 <script>
 import CalendarPanel from './calendar-panel.vue'
 import Languages from './languages.js'
+var  dateFormat = require('dateformat');
 
 export default {
   components: { CalendarPanel },
@@ -159,29 +160,8 @@ export default {
         this.togglePopup()
       }
     },
-    formatDate (date, fmt) {
-      const map = {
-        'M+': date.getMonth() + 1, // 月份
-        '[Dd]+': date.getDate(), // 日
-        '[Hh]+': date.getHours(), // 小时
-        'm+': date.getMinutes(), // 分
-        's+': date.getSeconds(), // 秒
-        'q+': Math.floor((date.getMonth() + 3) / 3), // 季度
-        'S': date.getMilliseconds() // 毫秒
-      }
-      let str = fmt.replace(/[Yy]+/g, function (str) {
-        return ('' + date.getFullYear()).slice(4 - str.length)
-      })
-      Object.keys(map).forEach((key) => {
-        str = str.replace(new RegExp(key), function (str) {
-          const value = '' + map[key]
-          return str.length === 1 ? value : ('00' + value).slice(value.length)
-        })
-      })
-      return str
-    },
     stringify (date) {
-      return this.formatDate(new Date(date), this.format)
+      return dateFormat(new Date(date), this.format)
     },
     isValidDate (date) {
       return !!new Date(date).getTime()
